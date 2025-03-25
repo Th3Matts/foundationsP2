@@ -5,9 +5,21 @@
   overflow: hidden;
 }
 
+header,
+main .hero,
+footer{
+  background: #1F2937;
+  color: #F9FAF8;
+}
+
 body{
   height: 100dvh;
 
   display: grid;
   grid-template-rows: 50px 1fr 50px;
+}
+
+main{
+  display: grid;
+
 }
