@@ -35,10 +35,17 @@ body{
   grid-template-rows: 50px 1fr 50px;
 }
 
-header .container{
+.container{
+  width: min(90rem, 85%);
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav{
+  padding-top: 8px;
 }
 
 .links a + a{
@@ -52,8 +59,6 @@ main{
 
 main .hero{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 main .quote{
@@ -64,18 +69,23 @@ main .quote{
   width: 450px;
 }
 
+.heroText button{
+  margin-top: 8px;
+}
+
 .hero h1,
 .hero p{
   margin-bottom: 1rempx;
 }
 
 .heroImg{
-  background: #565F67;
+  background: #777E85;
+
   width: 450px;
   height: 200px;
 
   text-align: center;
-  padding: 100px;
+  padding-top: 100px;
 }
 
 button{
