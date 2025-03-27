@@ -20,6 +20,7 @@ footer{
 
 main > div{
   padding: 2rem 0;
+  display: flex;
 }
 
 main .hero h1{
@@ -66,7 +67,8 @@ main .heroText{
   width: 450px;
 }
 
-main .heroText button{
+main .heroText button,
+.heroText p{
   margin-top: 8px;
 }
 
@@ -94,7 +96,7 @@ main .information .itemContainer{
   width: min(90rem, 90%);
   
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -110,7 +112,6 @@ main .information .card{
   height: 150px;
   border: 5px solid #3882F6;
   border-radius: 12px;
-  gap: 2rem;
 }
 
 main .information .itemContainer p{
@@ -122,6 +123,28 @@ main .information .itemContainer p{
 
 main .quote{
   background: #E5E7EB;
+}
+
+main .quote .container{
+  width: min(90rem, 75%);
+  color: #1F2937;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+}
+
+main .quote p{
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+
+}
+
+main .quote span{
+  font-size: 25px;
+  font-weight: 900;
 }
 
 button{
