@@ -10,28 +10,12 @@
   outline: none;
 }
 
-header,
-header a,
-main .hero,
-footer{
-  background: #1F2937;
-  color: #F9FAF8;
-}
-
-main > div{
-  padding: 2rem 0;
-  display: flex;
-}
-
-main .hero h1{
-  font-size: 48px;
-  font-weight: 900;
-  color: #F9FAF8;
-}
-
-main .hero p{
-  color: #E5E7EB;
-  font-size: 18px;
+:root{
+  --color-newspapper: #E9E3D7;
+  --color-main-blue: #1F2937;
+  --color-secondary-blue: #6d8ec1;
+  --color-header-font: #231F3D;
+  --color-paragraph-font: #54595E;
 }
 
 body{
@@ -48,6 +32,15 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+header,
+header a,
+main .hero,
+footer,
+footer a{
+  background: var(--color-newspapper);
+  color: var(--color-main-font);
 }
 
 header .container,
@@ -68,12 +61,29 @@ main{
   grid-template-rows: repeat(4, 1fr);
 }
 
+main > div{
+  padding: 2rem 0;
+  display: flex;
+}
+
+main .hero h1{
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--color-header-font);
+}
+
+main p{
+  color: var(--color-paragraph-font);
+  font-size: 18px;
+  font-weight: 400;
+}
+
 main .heroText{
   width: 450px;
 }
 
 main button{
-  background: #3882F6;
+  background: var(--color-secondary-blue);
 
   font-weight: 900;
   color: #F9FAF8;
@@ -92,12 +102,20 @@ main .heroText button,
 
 main .heroImg{
   background: #777E85;
+  box-shadow: 5px 5px 0px 1px var(--color-paragraph-font);
 
   width: 450px;
   height: 200px;
 
   text-align: center;
   padding-top: 100px;
+  overflow: hidden;
+}
+
+main .heroImg img{
+  max-width:100%;
+  
+  transform: translate(0, -50%);
 }
 
 main .information .container{
@@ -107,7 +125,6 @@ main .information .container{
   
   flex-direction: column;
   justify-content: space-around;
-  gap: 1rem;
 }
 
 main .information .itemContainer{
@@ -115,7 +132,6 @@ main .information .itemContainer{
   
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 main .information .item{
@@ -124,19 +140,22 @@ main .information .item{
   text-align: center;
 
   flex: 0 1 140px;
+  overflow: hidden;
+}
+
+main .information .card img{
+  width:100%;
+  height: 140px;
+  
+  border-radius: 8px;
+  
+  object-fit: cover;
+  transform: translate(0, 0%);
+  border: 5px solid var(--color-secondary-blue);
 }
 
 main .information .card{
-  height: 140px;
-  border: 5px solid #3882F6;
   border-radius: 12px;
-}
-
-main .information .itemContainer p{
-  margin-top: 1rem;
-  font-size: 18px;
-  font-weight: 400;
-  color: #54595E;
 }
 
 main .quote{
@@ -166,7 +185,7 @@ main .quote span{
 }
 
 main .signUpCard{
-  background: #3882F6;
+  background: var(--color-secondary-blue);
   color: #F9FAF8;
 
   width: min(90rem, 100%);
@@ -178,6 +197,10 @@ main .signUpCard{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+main .signUpCard p{
+  color: #F9FAF8;
 }
 
 main span{
