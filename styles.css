@@ -123,11 +123,11 @@ main .information .item{
   flex-direction: column;
   text-align: center;
 
-  flex: 0 1 150px;
+  flex: 0 1 140px;
 }
 
 main .information .card{
-  height: 150px;
+  height: 140px;
   border: 5px solid #3882F6;
   border-radius: 12px;
 }
