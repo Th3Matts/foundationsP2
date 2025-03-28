@@ -11,11 +11,19 @@
 }
 
 :root{
+  --color-white: #F9FAF8;
+  --color-of-white: #E5E7EB;
   --color-newspapper: #E9E3D7;
-  --color-main-blue: #1F2937;
   --color-secondary-blue: #6d8ec1;
+  --color-main-blue: #1F2937;
   --color-header-font: #231F3D;
+  --color-gray: #777E85;
   --color-paragraph-font: #54595E;
+}
+
+::selection{
+  background: var(--color-secondary-blue);
+  color: var(--color-white);
 }
 
 body{
@@ -58,7 +66,7 @@ nav{
 
 main{
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr max-content max-content;
 }
 
 main > div{
@@ -84,15 +92,20 @@ main .heroText{
 
 main button{
   background: var(--color-secondary-blue);
-
+  
   font-weight: 900;
-  color: #F9FAF8;
-
+  color: var(--color-white);
+  
   width: 125px;
   height: 30px;
   
-  border: none;
-  border-radius: 5px;
+  border: 2px solid var(--color-white);
+  border-radius: 3px;
+}
+
+main button:hover{
+  background: var(--color-main-blue);
+  box-shadow: 3px 3px 0px 0px var(--color-paragraph-font);
 }
 
 main .heroText button,
@@ -101,11 +114,11 @@ main .heroText button,
 }
 
 main .heroImg{
-  background: #777E85;
-  box-shadow: 5px 5px 0px 1px var(--color-paragraph-font);
+  background: var(--color-gray);
+  box-shadow: 5px 5px 0px 0px var(--color-paragraph-font);
 
   width: 450px;
-  height: 200px;
+  height: 250px;
 
   text-align: center;
   padding-top: 100px;
@@ -113,15 +126,15 @@ main .heroImg{
 }
 
 main .heroImg img{
-  max-width:100%;
+  max-width:120%;
   
-  transform: translate(0, -50%);
+  transform: translate(-10%, -40%);
 }
 
 main .information .container{
   font-size: 32px;
   font-weight: 900;
-  color: #1F2937;
+  color: var(--color-main-blue);
   
   flex-direction: column;
   justify-content: space-around;
@@ -159,12 +172,12 @@ main .information .card{
 }
 
 main .quote{
-  background: #E5E7EB;
+  background: var(--color-of-white);
 }
 
 main .quote .container{
   width: min(70rem, 75%);
-  color: #1F2937;
+  color: var(--color-main-blue);
   
   flex-direction: column;
   justify-content: center;
@@ -186,7 +199,7 @@ main .quote span{
 
 main .signUpCard{
   background: var(--color-secondary-blue);
-  color: #F9FAF8;
+  color: var(--color-white);
 
   width: min(90rem, 100%);
 
@@ -199,8 +212,13 @@ main .signUpCard{
   align-items: center;
 }
 
+main .signUpCard ::selection{
+  background: var(--color-paragraph-font);
+  color: var(--color-white);
+}
+
 main .signUpCard p{
-  color: #F9FAF8;
+  color: var(--color-white);
 }
 
 main span{
@@ -213,11 +231,16 @@ main .signUp p + p{
 }
 
 main .signUp button{
-  border: 1px solid #F9FAF8;
+  border: 1px solid var(--color-white);
 }
 
 footer .container{
   padding: 1rem;
 
   justify-content: center;
+}
+
+footer a{
+  color: var(--color-main-blue);
+  font-weight: 500;
 }
